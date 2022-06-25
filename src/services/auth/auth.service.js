@@ -3,8 +3,6 @@ import { SERVER_API } from '../../static/API';
 import TokenService from './token.service';
 import apiInstance from '../auth/apiInstance';
 
-const API_URL = 'identity';
-
 const login = (email, password) => {
   return axios
     .post(SERVER_API + 'users/login', {
