@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import BgImageMain from '../components/BgImageMain';
 import {
   Box,
@@ -20,13 +20,42 @@ import { FaJira } from 'react-icons/fa';
 import { FaConfluence } from 'react-icons/fa';
 import { ImCross } from 'react-icons/im';
 import { useNavigate } from 'react-router-dom';
+import { motion, AnimatePresence } from 'framer-motion';
+import { GiStarFormation } from 'react-icons/gi';
 
 const ProjectDetails = () => {
   const navigate = useNavigate();
+  const [showStar, setShowStar] = useState(false);
 
+  const sleep = ms => new Promise(r => setTimeout(r, ms));
+
+  const btnClicked = async () => {
+    setShowStar(true);
+    await sleep(1000);
+    setShowStar(false);
+  };
   return (
     <BgImageMain>
       <Center width={'100vw'} height={'100vh'}>
+        <AnimatePresence>
+          {showStar && (
+            <Box position={'absolute'} zIndex={'1'} backdropBlur={'10px'}>
+              <motion.div
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1, scale: 10 }}
+                transition={{ duration: 1 }}
+                exit={{ opacity: 0 }}
+              >
+                <VStack>
+                  <GiStarFormation color="gold" size={'50px'} />
+                  <Text color="gold" marginTop={0}>
+                    +10PKT
+                  </Text>
+                </VStack>
+              </motion.div>
+            </Box>
+          )}
+        </AnimatePresence>
         <Box
           bg={'white'}
           boxShadow={'dark-lg'}
@@ -181,7 +210,7 @@ const ProjectDetails = () => {
                 <Stack alignItems={'center'} paddingTop={'10'} width={'100%'}>
                   <Button
                     width={'full'}
-                    // onClick={() => onSubmit()}
+                    onClick={() => btnClicked()}
                     bgGradient="linear(to-tr, #f64ae7, #4963e8 90% )"
                     color={'white'}
                     _hover={{
