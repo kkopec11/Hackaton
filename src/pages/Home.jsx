@@ -17,7 +17,7 @@ const Home = () => {
               lineHeight={1.2}
               fontSize={'70px'}
             >
-              Welcome in XYZ App
+              Welcome in AC/DC App
             </Text>
             {/* <Text
               color={'black'}

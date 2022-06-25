@@ -10,8 +10,11 @@ import {
   Image,
   Button,
 } from '@chakra-ui/react';
-import CustomBtn from './CustomBtn';
+import { useNavigate } from 'react-router-dom';
+
 const ProjectCard = () => {
+  const navigate = useNavigate();
+
   return (
     <Center py={6}>
       <Box
@@ -77,16 +80,8 @@ const ProjectCard = () => {
           </Stack>
         </Stack>
         <Stack paddingTop={'5'}>
-          {/* <CustomBtn
-            bg={'linear(to-tr, #f64ae7, #4963e8 90% )'}
-            bgHover={'whiteAlpha.500'}
-            textColor={'white'}
-            // onClick={() => navigate('/login')}
-          >
-            Details
-          </CustomBtn> */}
           <Button
-            // onClick={() => onSubmit()}
+            onClick={() => navigate('/projectDetails')}
             rounded={'full'}
             bgGradient="linear(to-tr, #f64ae7, #4963e8 90% )"
             color={'white'}

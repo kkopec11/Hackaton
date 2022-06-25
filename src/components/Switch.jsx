@@ -4,6 +4,7 @@ import Home from '../pages/Home';
 import Login from '../pages/Login';
 import Register from '../pages/Register';
 import Projects from '../pages/Projects';
+import ProjectDetails from '../pages/ProjectDetails';
 
 const Switch = () => {
   return (
@@ -13,6 +14,7 @@ const Switch = () => {
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/projects" element={<Projects />} />
+        <Route path="/projectDetails" element={<ProjectDetails />} />
       </Routes>
     </>
   );

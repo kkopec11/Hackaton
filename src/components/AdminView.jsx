@@ -23,7 +23,7 @@ import projectsList from '../static/projects';
 import { MdSettings } from 'react-icons/md';
 const AdminView = () => {
   return (
-    <Box width={'100vw'} height={'100vh'}>
+    <Box width={'100%'} height={'95vh'}>
       <Center width={'100%'} height={'100%'} flexDirection={'column'}>
         <Stack paddingBottom={'10'}>
           <Text color={'white'} fontSize={'50px'} fontWeight={'600'}>
