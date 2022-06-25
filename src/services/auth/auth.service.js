@@ -28,7 +28,7 @@ const register = (name, email, password) => {
     password,
   });
 };
-
+// eslint-disable-next-line
 export default {
   login,
   logout,
