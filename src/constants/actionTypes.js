@@ -1,0 +1,15 @@
+export const LOGIN_SUCCESS = 'LOGIN_SUCCESS';
+export const LOGIN_FAIL = 'LOGIN_FAIL';
+export const LOGOUT = 'LOGOUT';
+
+export const SET_MESSAGE = 'SET_MESSAGE';
+export const SET_MESSAGE_SUCCESS = 'SET_MESSAGE_SUCCESS';
+export const SET_MESSAGE_FAIL = 'SET_MESSAGE_FAIL';
+export const CLEAR_MESSAGE = 'CLEAR_MESSAGE';
+export const AUTH = 'AUTH';
+
+export const NEW_ACCESS_TOKEN = 'NEW_ACCESS_TOKEN';
+export const NEW_REFRESH_TOKEN = 'NEW_REFRESH_TOKEN';
+
+export const REGISTER_SUCCESS = 'REGISTER_SUCCESS';
+export const REGISTER_FAIL = 'REGISTER_FAIL';
