@@ -12,10 +12,8 @@ import {
 } from '../constants/actionTypes';
 import AuthService from '../services/auth/auth.service';
 import {
-  ADMIN_500,
   LOGIN_ERROR_401,
   REG_SUCCESS_200,
-  ERROR_400,
   ERROR_REG_400,
 } from '../static/message';
 import { toast } from 'react-toastify';

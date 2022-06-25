@@ -1,15 +1,5 @@
 import React from 'react';
-import {
-  Flex,
-  Text,
-  VStack,
-  Stack,
-  Grid,
-  HStack,
-  GridItem,
-  Box,
-  Center,
-} from '@chakra-ui/react';
+import { Grid, GridItem } from '@chakra-ui/react';
 import ProjectCard from '../components/ProjectCard';
 import ProjectCardCaritas from '../components/ProjectCardCaritas';
 import ProjectCardPG from '../components/ProjectCardPG';

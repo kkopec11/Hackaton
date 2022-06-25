@@ -1,11 +1,9 @@
 import React, { useState } from 'react';
 import {
   Flex,
-  Box,
   FormControl,
   FormLabel,
   Input,
-  Checkbox,
   Stack,
   Link,
   Button,
@@ -19,7 +17,7 @@ import BgImageAuth from '../components/BgImageAuth';
 import { useNavigate } from 'react-router-dom';
 import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
 import { login } from '../actions/auth';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 
 const Login = () => {
   const navigate = useNavigate();

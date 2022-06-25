@@ -2,11 +2,7 @@ import React from 'react';
 import {
   Flex,
   Text,
-  VStack,
   Stack,
-  Grid,
-  HStack,
-  GridItem,
   Box,
   Center,
   TableContainer,
@@ -17,7 +13,6 @@ import {
   Th,
   Td,
   Tbody,
-  Tfoot,
 } from '@chakra-ui/react';
 import projectsList from '../static/projects';
 import { MdSettings } from 'react-icons/md';
