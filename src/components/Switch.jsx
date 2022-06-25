@@ -5,6 +5,8 @@ import Login from '../pages/Login';
 import Register from '../pages/Register';
 import Projects from '../pages/Projects';
 import ProjectDetails from '../pages/ProjectDetails';
+import ProjectDetailsCaritas from '../pages/ProjectDetailsCaritas';
+import ProjectDetailsPG from '../pages/ProjectDetailsPG';
 
 const Switch = () => {
   return (
@@ -15,6 +17,11 @@ const Switch = () => {
         <Route path="/register" element={<Register />} />
         <Route path="/projects" element={<Projects />} />
         <Route path="/projectDetails" element={<ProjectDetails />} />
+        <Route
+          path="/projectDetailsCaritas"
+          element={<ProjectDetailsCaritas />}
+        />
+        <Route path="/projectDetailsPG" element={<ProjectDetailsPG />} />
       </Routes>
     </>
   );

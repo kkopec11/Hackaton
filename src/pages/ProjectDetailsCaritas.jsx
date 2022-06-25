@@ -17,7 +17,7 @@ import { FaReact } from 'react-icons/fa';
 import { SiRedux } from 'react-icons/si';
 import { SiTypescript } from 'react-icons/si';
 import { FaNodeJs } from 'react-icons/fa';
-import { SiPostgresql } from 'react-icons/si';
+import { FaAws } from 'react-icons/fa';
 import { ImCross } from 'react-icons/im';
 import { useNavigate } from 'react-router-dom';
 
@@ -69,7 +69,7 @@ const ProjectDetails = () => {
                     fontWeight={'600'}
                     bgGradient="linear(to-tr, #f64ae7, #4963e8 90% )"
                   >
-                    XYZ
+                    Caritas
                   </Text>
                 </HStack>
 
@@ -98,8 +98,8 @@ const ProjectDetails = () => {
                     <Text>Node JS</Text>
                   </VStack>
                   <VStack>
-                    <SiPostgresql size={'30px'} />
-                    <Text>Postgresql</Text>
+                    <FaAws size={'30px'} />
+                    <Text>Amazon AWS</Text>
                   </VStack>
                 </Flex>
                 <Flex
@@ -118,7 +118,7 @@ const ProjectDetails = () => {
                           PM:
                         </Text>
                         <Text fontSize={'20px'} fontWeight={'200'}>
-                          John Smith
+                          Tomasz Malski
                         </Text>
                       </HStack>
                       <HStack>
@@ -126,7 +126,7 @@ const ProjectDetails = () => {
                           Contact phone:
                         </Text>
                         <Text fontSize={'20px'} fontWeight={'200'}>
-                          123 456 789
+                          +48505376010
                         </Text>
                       </HStack>
                       <HStack>
@@ -134,7 +134,7 @@ const ProjectDetails = () => {
                           email:
                         </Text>
                         <Text fontSize={'20px'} fontWeight={'200'}>
-                          john.smith@accenture.com
+                          tomasz.malski@accenture.com
                         </Text>
                       </HStack>
                     </VStack>
@@ -144,7 +144,7 @@ const ProjectDetails = () => {
                       Status:
                     </Text>
                     <Text fontSize={'20px'} fontWeight={'200'}>
-                      New
+                      Ongoing
                     </Text>
                   </HStack>
                 </Flex>
@@ -173,9 +173,7 @@ const ProjectDetails = () => {
             <GridItem width={'100%'} height={'100%'}>
               <Center width={'100%'} height={'100%'} flexDirection={'column'}>
                 <Image
-                  src={
-                    'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
-                  }
+                  src={'/assets/caritas.jpg'}
                   // height={'100%'}
                   rounded={'lg'}
                 />

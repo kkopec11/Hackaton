@@ -13,11 +13,11 @@ import {
   Stack,
   Button,
 } from '@chakra-ui/react';
-import { FaReact } from 'react-icons/fa';
-import { SiRedux } from 'react-icons/si';
-import { SiTypescript } from 'react-icons/si';
-import { FaNodeJs } from 'react-icons/fa';
-import { SiPostgresql } from 'react-icons/si';
+import { FaMagento } from 'react-icons/fa';
+import { SiGoogleanalytics } from 'react-icons/si';
+import { FaGoogle } from 'react-icons/fa';
+import { FaJira } from 'react-icons/fa';
+import { FaConfluence } from 'react-icons/fa';
 import { ImCross } from 'react-icons/im';
 import { useNavigate } from 'react-router-dom';
 
@@ -69,7 +69,7 @@ const ProjectDetails = () => {
                     fontWeight={'600'}
                     bgGradient="linear(to-tr, #f64ae7, #4963e8 90% )"
                   >
-                    XYZ
+                    PG
                   </Text>
                 </HStack>
 
@@ -82,24 +82,24 @@ const ProjectDetails = () => {
                   paddingTop={'2'}
                 >
                   <VStack>
-                    <FaReact size={'30px'} />
-                    <Text>React</Text>
+                    <FaMagento size={'30px'} />
+                    <Text>Magento</Text>
                   </VStack>
                   <VStack>
-                    <SiRedux size={'30px'} />
-                    <Text>Redux</Text>
+                    <SiGoogleanalytics size={'30px'} />
+                    <Text>Google Analytics</Text>
                   </VStack>
                   <VStack>
-                    <SiTypescript size={'30px'} />
-                    <Text>TypeScript</Text>
+                    <FaGoogle size={'30px'} />
+                    <Text>Google Tag Manager</Text>
                   </VStack>
                   <VStack>
-                    <FaNodeJs size={'30px'} />
-                    <Text>Node JS</Text>
+                    <FaJira size={'30px'} />
+                    <Text>Jira</Text>
                   </VStack>
                   <VStack>
-                    <SiPostgresql size={'30px'} />
-                    <Text>Postgresql</Text>
+                    <FaConfluence size={'30px'} />
+                    <Text>Confluence</Text>
                   </VStack>
                 </Flex>
                 <Flex
@@ -118,7 +118,7 @@ const ProjectDetails = () => {
                           PM:
                         </Text>
                         <Text fontSize={'20px'} fontWeight={'200'}>
-                          John Smith
+                          Anna Gromanska
                         </Text>
                       </HStack>
                       <HStack>
@@ -126,7 +126,7 @@ const ProjectDetails = () => {
                           Contact phone:
                         </Text>
                         <Text fontSize={'20px'} fontWeight={'200'}>
-                          123 456 789
+                          +48573258228
                         </Text>
                       </HStack>
                       <HStack>
@@ -134,7 +134,7 @@ const ProjectDetails = () => {
                           email:
                         </Text>
                         <Text fontSize={'20px'} fontWeight={'200'}>
-                          john.smith@accenture.com
+                          anna.gromanska@accenture.com
                         </Text>
                       </HStack>
                     </VStack>
@@ -144,7 +144,7 @@ const ProjectDetails = () => {
                       Status:
                     </Text>
                     <Text fontSize={'20px'} fontWeight={'200'}>
-                      New
+                      Finished
                     </Text>
                   </HStack>
                 </Flex>
@@ -155,17 +155,18 @@ const ProjectDetails = () => {
                 </Stack>
                 <Stack>
                   <Text color={'gray.500'}>
-                    Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
-                    diam nonumy eirmod tempor invidunt ut labore et dolore magna
-                    aliquyam erat, sed diam voluptua. At vero eos et accusam et
-                    justo duo dolores et ea rebum. Lorem ipsum dolor sit amet,
-                    consetetur sadipscing elitr, sed diam nonumy eirmod tempor
-                    invidunt ut labore et dolore magna aliquyam erat, sed diam
-                    voluptua. At vero eos et accusam et justo duo dolores et ea
-                    rebum.Lorem ipsum dolor sit amet, consetetur sadipscing
-                    elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-                    dolore magna aliquyam erat, sed diam voluptua. At vero eos
-                    et accusam et justo duo dolores et ea rebum.
+                    The PG Company had introduced the e-comm platform for B2B
+                    present on North, Latin America and Europe. The natural
+                    shift from the traditional offline sales rep process to
+                    e-commerce should be driven by data analysis and insights.
+                    Project goal was to: verify the current GA set up. Accenture
+                    provided the team to diagnose the clients' systems and find
+                    right solutions. We worked in the Agaile work methodology
+                    which allowed us for the delivery of results on the fly. We
+                    fulfill all goals and delivered: Recommendations Matrix,
+                    Goal's structure for UA, 23 new events for GA, 28 Events
+                    with required update, Naming convention mapped, Process Map
+                    for future projects.
                   </Text>
                 </Stack>
               </Flex>
@@ -173,9 +174,7 @@ const ProjectDetails = () => {
             <GridItem width={'100%'} height={'100%'}>
               <Center width={'100%'} height={'100%'} flexDirection={'column'}>
                 <Image
-                  src={
-                    'https://images.unsplash.com/photo-1515378791036-0648a3ef77b2?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
-                  }
+                  src={'/assets/pg_logo.jpg'}
                   // height={'100%'}
                   rounded={'lg'}
                 />
