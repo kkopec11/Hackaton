@@ -5,7 +5,7 @@ import Background from '../assets/Home/home_bg.jpg';
 const BgImageAuth = ({ children }) => {
   return (
     <Flex
-      width={'100vw'}
+      width={'full'}
       height={'100vh'}
       backgroundImage={`url(${Background})`}
       backgroundSize={'cover'}

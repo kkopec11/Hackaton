@@ -25,8 +25,8 @@ import { GiStarFormation } from 'react-icons/gi';
 
 const ProjectDetails = () => {
   const navigate = useNavigate();
-  const [showStar, setShowStar] = useState(false);
 
+  const [showStar, setShowStar] = useState(false);
   const sleep = ms => new Promise(r => setTimeout(r, ms));
 
   const btnClicked = async () => {
@@ -34,6 +34,7 @@ const ProjectDetails = () => {
     await sleep(1000);
     setShowStar(false);
   };
+
   return (
     <BgImageMain>
       <Center width={'100vw'} height={'100vh'}>
@@ -62,7 +63,7 @@ const ProjectDetails = () => {
           rounded={'lg'}
           p={6}
           width={'80%'}
-          height={'70%'}
+          // height={'100%'}
         >
           <Flex width={'100%'} justifyContent={'flex-end'}>
             <button>
@@ -72,7 +73,7 @@ const ProjectDetails = () => {
           <Grid
             templateColumns="repeat(2, 1fr)"
             width={'100%'}
-            height={'100%'}
+            // height={'10%'}
             gap={'5'}
           >
             <GridItem
@@ -87,14 +88,28 @@ const ProjectDetails = () => {
                 alignItems={'center'}
                 justifyContent={'center'}
                 gap={'5'}
+                height={'100%'}
               >
                 <HStack>
-                  <Text fontSize={'50px'} fontWeight={'600'}>
+                  <Text
+                    fontSize={{
+                      base: '18px',
+                      md: '20px',
+                      lg: '35px',
+                      xl: '50px',
+                    }}
+                    fontWeight={'600'}
+                  >
                     Project
                   </Text>
                   <Text
                     bgClip="text"
-                    fontSize={'50px'}
+                    fontSize={{
+                      base: '18px',
+                      md: '20px',
+                      lg: '35px',
+                      xl: '50px',
+                    }}
                     fontWeight={'600'}
                     bgGradient="linear(to-tr, #f64ae7, #4963e8 90% )"
                   >
@@ -102,7 +117,15 @@ const ProjectDetails = () => {
                   </Text>
                 </HStack>
 
-                <Text fontSize={'20px'} fontWeight={'400'}>
+                <Text
+                  fontSize={{
+                    base: '8px',
+                    md: '10px',
+                    lg: '15px',
+                    xl: '20px',
+                  }}
+                  fontWeight={'400'}
+                >
                   Technology Stack:
                 </Text>
                 <Flex
@@ -111,23 +134,68 @@ const ProjectDetails = () => {
                   paddingTop={'2'}
                 >
                   <VStack>
-                    <FaReact size={'30px'} />
+                    <Box
+                      height={{
+                        base: '8px',
+                        md: '10px',
+                        lg: '20px',
+                        xl: '30px',
+                      }}
+                    >
+                      <FaReact size={'100%'} />
+                    </Box>
                     <Text>React</Text>
                   </VStack>
                   <VStack>
-                    <SiRedux size={'30px'} />
+                    <Box
+                      height={{
+                        base: '8px',
+                        md: '10px',
+                        lg: '20px',
+                        xl: '30px',
+                      }}
+                    >
+                      <SiRedux size={'100%'} />
+                    </Box>
                     <Text>Redux</Text>
                   </VStack>
                   <VStack>
-                    <SiTypescript size={'30px'} />
+                    <Box
+                      height={{
+                        base: '8px',
+                        md: '10px',
+                        lg: '20px',
+                        xl: '30px',
+                      }}
+                    >
+                      <SiTypescript size={'100%'} />
+                    </Box>
                     <Text>TypeScript</Text>
                   </VStack>
                   <VStack>
-                    <FaNodeJs size={'30px'} />
+                    <Box
+                      height={{
+                        base: '8px',
+                        md: '10px',
+                        lg: '20px',
+                        xl: '30px',
+                      }}
+                    >
+                      <FaNodeJs size={'100%'} />
+                    </Box>
                     <Text>Node JS</Text>
                   </VStack>
                   <VStack>
-                    <FaAws size={'30px'} />
+                    <Box
+                      height={{
+                        base: '8px',
+                        md: '10px',
+                        lg: '20px',
+                        xl: '30px',
+                      }}
+                    >
+                      <FaAws size={'100%'} />
+                    </Box>
                     <Text>Amazon AWS</Text>
                   </VStack>
                 </Flex>
@@ -143,47 +211,127 @@ const ProjectDetails = () => {
                   <HStack>
                     <VStack alignItems={'flex-start'}>
                       <HStack>
-                        <Text fontSize={'20px'} fontWeight={'400'}>
+                        <Text
+                          fontSize={{
+                            base: '8px',
+                            md: '10px',
+                            lg: '15px',
+                            xl: '20px',
+                          }}
+                          fontWeight={'400'}
+                        >
                           PM:
                         </Text>
-                        <Text fontSize={'20px'} fontWeight={'200'}>
+                        <Text
+                          fontSize={{
+                            base: '8px',
+                            md: '10px',
+                            lg: '15px',
+                            xl: '20px',
+                          }}
+                          fontWeight={'200'}
+                        >
                           Tomasz Malski
                         </Text>
                       </HStack>
                       <HStack>
-                        <Text fontSize={'20px'} fontWeight={'400'}>
+                        <Text
+                          fontSize={{
+                            base: '8px',
+                            md: '10px',
+                            lg: '15px',
+                            xl: '20px',
+                          }}
+                          fontWeight={'400'}
+                        >
                           Contact phone:
                         </Text>
-                        <Text fontSize={'20px'} fontWeight={'200'}>
+                        <Text
+                          fontSize={{
+                            base: '8px',
+                            md: '10px',
+                            lg: '15px',
+                            xl: '20px',
+                          }}
+                          fontWeight={'200'}
+                        >
                           +48505376010
                         </Text>
                       </HStack>
                       <HStack>
-                        <Text fontSize={'20px'} fontWeight={'400'}>
+                        <Text
+                          fontSize={{
+                            base: '8px',
+                            md: '10px',
+                            lg: '15px',
+                            xl: '20px',
+                          }}
+                          fontWeight={'400'}
+                        >
                           email:
                         </Text>
-                        <Text fontSize={'20px'} fontWeight={'200'}>
+                        <Text
+                          fontSize={{
+                            base: '8px',
+                            md: '10px',
+                            lg: '15px',
+                            xl: '20px',
+                          }}
+                          fontWeight={'200'}
+                        >
                           tomasz.malski@accenture.com
                         </Text>
                       </HStack>
                     </VStack>
                   </HStack>
                   <HStack>
-                    <Text fontSize={'20px'} fontWeight={'400'}>
+                    <Text
+                      fontSize={{
+                        base: '8px',
+                        md: '10px',
+                        lg: '15px',
+                        xl: '20px',
+                      }}
+                      fontWeight={'400'}
+                    >
                       Status:
                     </Text>
-                    <Text fontSize={'20px'} fontWeight={'200'}>
+                    <Text
+                      fontSize={{
+                        base: '8px',
+                        md: '10px',
+                        lg: '15px',
+                        xl: '20px',
+                      }}
+                      fontWeight={'200'}
+                    >
                       Ongoing
                     </Text>
                   </HStack>
                 </Flex>
                 <Stack>
-                  <Text fontSize={'25px'} fontWeight={'400'}>
+                  <Text
+                    fontSize={{
+                      base: '8px',
+                      md: '10px',
+                      lg: '15px',
+                      xl: '25px',
+                    }}
+                    fontWeight={'400'}
+                  >
                     Description
                   </Text>
                 </Stack>
                 <Stack>
-                  <Text color={'gray.500'}>
+                  <Text
+                    fontSize={{
+                      base: '8px',
+                      md: '10px',
+                      lg: '11px',
+                      xl: '14px',
+                    }}
+                    color={'gray.500'}
+                  >
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed
                     diam nonumy eirmod tempor invidunt ut labore et dolore magna
                     aliquyam erat, sed diam voluptua. At vero eos et accusam et
@@ -191,10 +339,7 @@ const ProjectDetails = () => {
                     consetetur sadipscing elitr, sed diam nonumy eirmod tempor
                     invidunt ut labore et dolore magna aliquyam erat, sed diam
                     voluptua. At vero eos et accusam et justo duo dolores et ea
-                    rebum.Lorem ipsum dolor sit amet, consetetur sadipscing
-                    elitr, sed diam nonumy eirmod tempor invidunt ut labore et
-                    dolore magna aliquyam erat, sed diam voluptua. At vero eos
-                    et accusam et justo duo dolores et ea rebum.
+                    rebum.
                   </Text>
                 </Stack>
               </Flex>

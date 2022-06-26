@@ -14,10 +14,10 @@ import {
   Button,
 } from '@chakra-ui/react';
 import { FaMagento } from 'react-icons/fa';
-import { SiGoogleanalytics } from 'react-icons/si';
 import { FaGoogle } from 'react-icons/fa';
-import { FaJira } from 'react-icons/fa';
 import { FaConfluence } from 'react-icons/fa';
+import { FaJira } from 'react-icons/fa';
+import { SiGoogleanalytics } from 'react-icons/si';
 import { ImCross } from 'react-icons/im';
 import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -25,8 +25,8 @@ import { GiStarFormation } from 'react-icons/gi';
 
 const ProjectDetails = () => {
   const navigate = useNavigate();
-  const [showStar, setShowStar] = useState(false);
 
+  const [showStar, setShowStar] = useState(false);
   const sleep = ms => new Promise(r => setTimeout(r, ms));
 
   const btnClicked = async () => {
@@ -34,6 +34,7 @@ const ProjectDetails = () => {
     await sleep(1000);
     setShowStar(false);
   };
+
   return (
     <BgImageMain>
       <Center width={'100vw'} height={'100vh'}>
@@ -62,7 +63,7 @@ const ProjectDetails = () => {
           rounded={'lg'}
           p={6}
           width={'80%'}
-          height={'70%'}
+          // height={'100%'}
         >
           <Flex width={'100%'} justifyContent={'flex-end'}>
             <button>
@@ -72,7 +73,7 @@ const ProjectDetails = () => {
           <Grid
             templateColumns="repeat(2, 1fr)"
             width={'100%'}
-            height={'100%'}
+            // height={'10%'}
             gap={'5'}
           >
             <GridItem
@@ -87,14 +88,28 @@ const ProjectDetails = () => {
                 alignItems={'center'}
                 justifyContent={'center'}
                 gap={'5'}
+                height={'100%'}
               >
                 <HStack>
-                  <Text fontSize={'50px'} fontWeight={'600'}>
+                  <Text
+                    fontSize={{
+                      base: '18px',
+                      md: '20px',
+                      lg: '35px',
+                      xl: '50px',
+                    }}
+                    fontWeight={'600'}
+                  >
                     Project
                   </Text>
                   <Text
                     bgClip="text"
-                    fontSize={'50px'}
+                    fontSize={{
+                      base: '18px',
+                      md: '20px',
+                      lg: '35px',
+                      xl: '50px',
+                    }}
                     fontWeight={'600'}
                     bgGradient="linear(to-tr, #f64ae7, #4963e8 90% )"
                   >
@@ -102,7 +117,15 @@ const ProjectDetails = () => {
                   </Text>
                 </HStack>
 
-                <Text fontSize={'20px'} fontWeight={'400'}>
+                <Text
+                  fontSize={{
+                    base: '8px',
+                    md: '10px',
+                    lg: '15px',
+                    xl: '20px',
+                  }}
+                  fontWeight={'400'}
+                >
                   Technology Stack:
                 </Text>
                 <Flex
@@ -111,24 +134,114 @@ const ProjectDetails = () => {
                   paddingTop={'2'}
                 >
                   <VStack>
-                    <FaMagento size={'30px'} />
-                    <Text>Magento</Text>
+                    <Box
+                      height={{
+                        base: '8px',
+                        md: '10px',
+                        lg: '20px',
+                        xl: '30px',
+                      }}
+                    >
+                      <FaMagento size={'100%'} />
+                    </Box>
+                    <Text
+                      fontSize={{
+                        base: '8px',
+                        md: '10px',
+                        lg: '12px',
+                        xl: '20px',
+                      }}
+                    >
+                      Magento
+                    </Text>
                   </VStack>
                   <VStack>
-                    <SiGoogleanalytics size={'30px'} />
-                    <Text>Google Analytics</Text>
+                    <Box
+                      height={{
+                        base: '8px',
+                        md: '10px',
+                        lg: '20px',
+                        xl: '30px',
+                      }}
+                    >
+                      <SiGoogleanalytics size={'100%'} />
+                    </Box>
+                    <Text
+                      fontSize={{
+                        base: '8px',
+                        md: '10px',
+                        lg: '12px',
+                        xl: '20px',
+                      }}
+                    >
+                      Google Analytics
+                    </Text>
                   </VStack>
                   <VStack>
-                    <FaGoogle size={'30px'} />
-                    <Text>Google Tag Manager</Text>
+                    <Box
+                      height={{
+                        base: '8px',
+                        md: '10px',
+                        lg: '20px',
+                        xl: '30px',
+                      }}
+                    >
+                      <FaGoogle size={'100%'} />
+                    </Box>
+                    <Text
+                      fontSize={{
+                        base: '8px',
+                        md: '10px',
+                        lg: '12px',
+                        xl: '20px',
+                      }}
+                    >
+                      Google Tag Manager
+                    </Text>
                   </VStack>
                   <VStack>
-                    <FaJira size={'30px'} />
-                    <Text>Jira</Text>
+                    <Box
+                      height={{
+                        base: '8px',
+                        md: '10px',
+                        lg: '20px',
+                        xl: '30px',
+                      }}
+                    >
+                      <FaJira size={'100%'} />
+                    </Box>
+                    <Text
+                      fontSize={{
+                        base: '8px',
+                        md: '10px',
+                        lg: '12px',
+                        xl: '20px',
+                      }}
+                    >
+                      Jira
+                    </Text>
                   </VStack>
                   <VStack>
-                    <FaConfluence size={'30px'} />
-                    <Text>Confluence</Text>
+                    <Box
+                      height={{
+                        base: '8px',
+                        md: '10px',
+                        lg: '20px',
+                        xl: '30px',
+                      }}
+                    >
+                      <FaConfluence size={'100%'} />
+                    </Box>
+                    <Text
+                      fontSize={{
+                        base: '8px',
+                        md: '10px',
+                        lg: '12px',
+                        xl: '20px',
+                      }}
+                    >
+                      Confluence
+                    </Text>
                   </VStack>
                 </Flex>
                 <Flex
@@ -143,47 +256,127 @@ const ProjectDetails = () => {
                   <HStack>
                     <VStack alignItems={'flex-start'}>
                       <HStack>
-                        <Text fontSize={'20px'} fontWeight={'400'}>
+                        <Text
+                          fontSize={{
+                            base: '8px',
+                            md: '10px',
+                            lg: '15px',
+                            xl: '20px',
+                          }}
+                          fontWeight={'400'}
+                        >
                           PM:
                         </Text>
-                        <Text fontSize={'20px'} fontWeight={'200'}>
+                        <Text
+                          fontSize={{
+                            base: '8px',
+                            md: '10px',
+                            lg: '15px',
+                            xl: '20px',
+                          }}
+                          fontWeight={'200'}
+                        >
                           Anna Gromanska
                         </Text>
                       </HStack>
                       <HStack>
-                        <Text fontSize={'20px'} fontWeight={'400'}>
+                        <Text
+                          fontSize={{
+                            base: '8px',
+                            md: '10px',
+                            lg: '15px',
+                            xl: '20px',
+                          }}
+                          fontWeight={'400'}
+                        >
                           Contact phone:
                         </Text>
-                        <Text fontSize={'20px'} fontWeight={'200'}>
+                        <Text
+                          fontSize={{
+                            base: '8px',
+                            md: '10px',
+                            lg: '15px',
+                            xl: '20px',
+                          }}
+                          fontWeight={'200'}
+                        >
                           +48573258228
                         </Text>
                       </HStack>
                       <HStack>
-                        <Text fontSize={'20px'} fontWeight={'400'}>
+                        <Text
+                          fontSize={{
+                            base: '8px',
+                            md: '10px',
+                            lg: '15px',
+                            xl: '20px',
+                          }}
+                          fontWeight={'400'}
+                        >
                           email:
                         </Text>
-                        <Text fontSize={'20px'} fontWeight={'200'}>
+                        <Text
+                          fontSize={{
+                            base: '8px',
+                            md: '10px',
+                            lg: '15px',
+                            xl: '20px',
+                          }}
+                          fontWeight={'200'}
+                        >
                           anna.gromanska@accenture.com
                         </Text>
                       </HStack>
                     </VStack>
                   </HStack>
                   <HStack>
-                    <Text fontSize={'20px'} fontWeight={'400'}>
+                    <Text
+                      fontSize={{
+                        base: '8px',
+                        md: '10px',
+                        lg: '15px',
+                        xl: '20px',
+                      }}
+                      fontWeight={'400'}
+                    >
                       Status:
                     </Text>
-                    <Text fontSize={'20px'} fontWeight={'200'}>
+                    <Text
+                      fontSize={{
+                        base: '8px',
+                        md: '10px',
+                        lg: '15px',
+                        xl: '20px',
+                      }}
+                      fontWeight={'200'}
+                    >
                       Finished
                     </Text>
                   </HStack>
                 </Flex>
                 <Stack>
-                  <Text fontSize={'25px'} fontWeight={'400'}>
+                  <Text
+                    fontSize={{
+                      base: '8px',
+                      md: '10px',
+                      lg: '15px',
+                      xl: '25px',
+                    }}
+                    fontWeight={'400'}
+                  >
                     Description
                   </Text>
                 </Stack>
                 <Stack>
-                  <Text color={'gray.500'}>
+                  <Text
+                    fontSize={{
+                      base: '8px',
+                      md: '10px',
+                      lg: '11px',
+                      xl: '14px',
+                    }}
+                    color={'gray.500'}
+                  >
                     The PG Company had introduced the e-comm platform for B2B
                     present on North, Latin America and Europe. The natural
                     shift from the traditional offline sales rep process to

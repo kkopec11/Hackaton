@@ -11,7 +11,7 @@ const Projects = () => {
   console.log(currentProfile.type);
   return (
     <BgImageMain>
-      <Box width={'100%'} height={'100%'}>
+      <Box width={'99%'} height={'100%'}>
         <Navbar />
         {currentProfile.type === 'user' && <UserView />}
         {currentProfile.type === 'admin' && <AdminView />}

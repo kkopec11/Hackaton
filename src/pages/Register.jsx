@@ -14,6 +14,7 @@ import {
   InputRightElement,
   InputGroup,
   Spinner,
+  Center,
 } from '@chakra-ui/react';
 import BgImageAuth from '../components/BgImageAuth';
 import { useNavigate } from 'react-router-dom';
@@ -57,12 +58,19 @@ const Register = () => {
           px={6}
           bg={'blackAlpha.700'}
           rounded={'lg'}
+          width={{ base: '240px', md: '330px', lg: '400px', xl: '400px' }}
         >
           <Stack align={'center'}>
-            <Heading fontSize={'4xl'} color={'white'}>
+            <Heading
+              fontSize={{ base: 'md', md: 'lg', lg: '3xl', xl: '4xl' }}
+              color={'white'}
+            >
               Sign up
             </Heading>
-            <Text fontSize={'lg'} color={'gray.300'}>
+            <Text
+              fontSize={{ base: '11px', md: 'sm', lg: 'lg', xl: 'lg' }}
+              color={'gray.300'}
+            >
               And check Accenture Song projects!
             </Text>
           </Stack>
@@ -70,7 +78,12 @@ const Register = () => {
             <HStack>
               <Box>
                 <FormControl id="firstName" isRequired>
-                  <FormLabel color={'white'}>First Name</FormLabel>
+                  <FormLabel
+                    fontSize={{ base: '11px', md: 'sm', lg: 'lg', xl: 'lg' }}
+                    color={'white'}
+                  >
+                    First Name
+                  </FormLabel>
                   <Input
                     value={firstName}
                     onChange={e => setFirstName(e.target.value)}
@@ -81,7 +94,12 @@ const Register = () => {
               </Box>
               <Box>
                 <FormControl id="lastName">
-                  <FormLabel color={'white'}>Last Name</FormLabel>
+                  <FormLabel
+                    fontSize={{ base: '11px', md: 'sm', lg: 'lg', xl: 'lg' }}
+                    color={'white'}
+                  >
+                    Last Name
+                  </FormLabel>
                   <Input
                     value={lastName}
                     onChange={e => setLastName(e.target.value)}
@@ -92,7 +110,12 @@ const Register = () => {
               </Box>
             </HStack>
             <FormControl id="email" isRequired>
-              <FormLabel color={'white'}>Email address</FormLabel>
+              <FormLabel
+                fontSize={{ base: '11px', md: 'sm', lg: 'lg', xl: 'lg' }}
+                color={'white'}
+              >
+                Email address
+              </FormLabel>
               <Input
                 value={email}
                 onChange={e => setEmail(e.target.value)}
@@ -101,7 +124,12 @@ const Register = () => {
               />
             </FormControl>
             <FormControl id="password" isRequired>
-              <FormLabel color={'white'}>Password</FormLabel>
+              <FormLabel
+                fontSize={{ base: '11px', md: 'sm', lg: 'lg', xl: 'lg' }}
+                color={'white'}
+              >
+                Password
+              </FormLabel>
               <InputGroup>
                 <Input
                   value={password}
@@ -120,22 +148,31 @@ const Register = () => {
                 </InputRightElement>
               </InputGroup>
             </FormControl>
-            <Button
-              onClick={() => onSubmit()}
-              disabled={loading}
-              bgGradient="linear(to-tr, #f64ae7, #4963e8 90% )"
-              color={'white'}
-              _hover={{
-                bgGradient: 'linear(to-tr, #c73bbb, #3347ab 90% )',
-              }}
-              _active={{
-                bgGradient: 'linear(to-tr, #c73bbb, #3347ab 90% )',
-              }}
-            >
-              {loading ? <Spinner /> : 'Sign up'}
-            </Button>
+            <Center width={'100%'}>
+              <Button
+                fontSize={{ base: '11px', md: 'md', lg: 'lg', xl: 'lg' }}
+                width={'100%'}
+                onClick={() => onSubmit()}
+                disabled={loading}
+                bgGradient="linear(to-tr, #f64ae7, #4963e8 90% )"
+                color={'white'}
+                _hover={{
+                  bgGradient: 'linear(to-tr, #c73bbb, #3347ab 90% )',
+                }}
+                _active={{
+                  bgGradient: 'linear(to-tr, #c73bbb, #3347ab 90% )',
+                }}
+              >
+                {loading ? <Spinner /> : 'Sign up'}
+              </Button>
+            </Center>
           </Stack>
-          <Text align={'center'} color={'gray.300'} fontWeight={600}>
+          <Text
+            fontSize={{ base: '11px', md: 'sm', lg: 'lg', xl: 'lg' }}
+            align={'center'}
+            color={'gray.300'}
+            fontWeight={600}
+          >
             Already have an account?{' '}
             <Link onClick={() => navigate('/login')} color={'white'}>
               Login
